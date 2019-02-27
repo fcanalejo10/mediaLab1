@@ -39,11 +39,32 @@
   location for your player window
   -->
   
-	<button type="button">Play</button>
-	<button type="button">Pause</button>
-	<button type="button">Stop</button>
-	<button type="button">Jump to 5 sec forward</button>
+	<button onclick="https://github.com/fcanalejo10/mediaLab1/blob/develop/src/js/control-bar/play-toggle.js">Play</button>
+	<button onclick="https://github.com/fcanalejo10/mediaLab1/blob/develop/src/js/control-bar/play-toggle.js">Pause</button>
+	<button onclick="stop()">Stop</button>
+	<script>
+		function stop(){
+			var video = document.getElementById('vidId');
+			video.pause();
+			video.currentTime = 0;
+			video.load();
+		}
+	<button onclick="jumpForward()">Jump to 5 sec forward</button>
+	<script>
+		function stop(){
+			var video = document.getElementById('vidId');
+			video.currentTime = video.currentTime+5;
+			video.load();
+		}
+	<\script>
 	<button type="button">Jump to 5 sec backwards</button>	
+	<script>
+		function stop(){
+			var video = document.getElementById('vidId');
+			video.currentTime = video.currentTime-5;
+			video.load();
+		}
+	<\script>
 	
 	<p>Playlist</p>
 	
