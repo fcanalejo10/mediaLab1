@@ -42,6 +42,8 @@
 	<button onclick="https://github.com/fcanalejo10/mediaLab1/blob/develop/src/js/control-bar/play-toggle.js">Play</button>
 	<button onclick="https://github.com/fcanalejo10/mediaLab1/blob/develop/src/js/control-bar/play-toggle.js">Pause</button>
 	<button onclick="stop()">Stop</button>
+	<button onclick="jumpForward()">Jump to 5 sec forward</button>
+	<button onclick="jumpBackwards()">Jump to 5 sec backwards</button>	
 	<script>
 		function stop(){
 			var video = document.getElementById('vidId');
@@ -49,23 +51,17 @@
 			video.currentTime = 0;
 			video.load();
 		}
-	<\script>
-	<button onclick="jumpForward()">Jump to 5 sec forward</button>
-	<script>
-		function stop(){
+		function jumpForward(){
 			var video = document.getElementById('vidId');
 			video.currentTime = video.currentTime+5;
 			video.load();
 		}
-	<\script>
-	<button type="button">Jump to 5 sec backwards</button>	
-	<script>
-		function stop(){
+		function jumpBackwards(){
 			var video = document.getElementById('vidId');
 			video.currentTime = video.currentTime-5;
 			video.load();
 		}
-	<\script>
+	</script>
 	
 	<p>Playlist</p>
 	
