@@ -66,15 +66,17 @@
 	<button onclick="jumpForward()">Jump to 5 sec forward</button>
 	<script>
 		function jumpForward(){
-			player.currentTime=player.currentTime+5;
-			//player.load();
+			player.currentTime=player.currentTime-5;
+			player.load();
+			player.play();
 		}
 	</script>
 	<button onclick="jumpBackwards()">Jump to 5 sec backwards</button>	
 	<script>
 		function jumpBackwards(){
 			player.currentTime=player.currentTime+5;
-			//player.load();
+			player.load();
+			player.play();
 		}
 	</script>
 	
