@@ -39,27 +39,42 @@
   location for your player window
   -->
   
-	<button onclick="C:/Users/fcana/OneDrive/Documentos/GitHub/mediaLab1/src/js/control-bar/play-toggle.js">Play</button>
-	<button onclick="C:/Users/fcana/OneDrive/Documentos/GitHub/mediaLab1/src/js/control-bar/play-toggle.js">Pause</button>
+	<button onclick="play()">Play</button>
+	<script>
+		function play(){
+			if(player.paused()){
+				player.play();
+			}
+		}
+	</script>
+	<button onclick="pause()">Pause</button>
+	<script>
+		function pause(){
+			if(!player.paused()){
+				player.pause();
+			}
+		}
+	</script>
 	<button onclick="stop()">Stop</button>
-	<button onclick="jumpForward()">Jump to 5 sec forward</button>
-	<button onclick="jumpBackwards()">Jump to 5 sec backwards</button>	
 	<script>
 		function stop(){
-			var video = document.getElementById('vidId');
-			video.pause();
-			video.currentTime = 0;
-			video.load();
+			player.pause();
+			player.currentTime=0;
+			player.load();
 		}
+	</script>
+	<button onclick="jumpForward()">Jump to 5 sec forward</button>
+	<script>
 		function jumpForward(){
-			var video = document.getElementById('vidId');
-			video.currentTime = video.currentTime+5;
-			video.load();
+			player.currentTime=player.currentTime+5;
+			player.load();
 		}
+	</script>
+	<button onclick="jumpBackwards()">Jump to 5 sec backwards</button>	
+	<script>
 		function jumpBackwards(){
-			var video = document.getElementById('vidId');
-			video.currentTime = video.currentTime-5;
-			video.load();
+			player.currentTime=player.currentTime+5;
+			player.load();
 		}
 	</script>
 	
