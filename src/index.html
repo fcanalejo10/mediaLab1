@@ -75,6 +75,19 @@
 			player.currentTime=player.currentTime-5;
 		}
 	</script>
+	<button onclick="mute()">Mute</button>
+	<script>
+		function mute() {
+			if(!player.muted){
+				player.muted = true;
+				Mute.innerHTML = "Unmute";
+			}
+			else{
+				player.muted = false;
+				Mute.innerHTML = "Mute";
+			}
+		}
+	</script>
 	
 	<p>Playlist</p>
 	
