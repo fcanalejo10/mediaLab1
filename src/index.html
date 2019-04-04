@@ -44,7 +44,6 @@
 		function play(){
 			if(player.paused()){
 				player.play();
-				player.currentTime=0;
 			}
 		}
 	</script>
@@ -53,7 +52,6 @@
 		function pause(){
 			if(!player.paused()){
 				player.pause();
-				player.currentTime=0;
 			}
 		}
 	</script>
@@ -62,6 +60,9 @@
 		function stop(){
 			if(!player.paused()){
 				player.pause();
+				player.currentTime=0;
+			}
+			else{
 				player.currentTime=0;
 			}
 		}
