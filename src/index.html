@@ -58,9 +58,9 @@
 	<button onclick="stop()">Stop</button>
 	<script>
 		function stop(){
-			var videoPlayer = document.getElementByTagName('player')[0];
-			videoPlayer.pause();
-			videoPlayer.currentTime=0;
+			if(!player.paused()){
+				player.pause();
+			}
 		}
 	</script>
 	<button onclick="jumpForward()">Jump to 5 sec forward</button>
