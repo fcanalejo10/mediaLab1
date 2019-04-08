@@ -46,7 +46,8 @@
 	<button onclick="stop()">Stop</button>
 	<button onclick="jumpForward()">Jump to 5 sec forward</button>
 	<button onclick="jumpBackwards()">Jump to 5 sec backwards</button>	
-	<button onclick="mute()">Mute</button>
+	<button onclick="zoomIn()">Zoom In</button>
+	<button onclick="zoomOut()">Zoom Out</button>
 	
 	<script>
 		
@@ -78,15 +79,15 @@
 	function jumpBackwards(){
 		player.currentTime(player.currentTime() -5);
 	}
-	function mute() {
-		if(!player.muted){
-			player.muted(true);
-			Mute.innerHTML = "Unmute";
-		}
-		else{
-			player.muted(false);
-			Mute.innerHTML = "Mute";
-		}
+	function zoomIn() {
+		var vid = document.querySelector("#my_video_1");
+		vid.setAttribute('width', 1280);
+		vid.setAttribute('height', 536);
+	}
+	function zoomOut() {
+		var vid = document.querySelector("#my_video_1");
+		vid.setAttribute('width', 640);
+		vid.setAttribute('height', 268);
 	}
 	</script>
 	
