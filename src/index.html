@@ -66,10 +66,10 @@
 	function stop(){
 		if(!player.paused()){
 			player.pause();
-			player.currentTime() =0;
+			player.currentTime(0);
 		}
 		else{
-			player.currentTime() =0;
+			player.currentTime(0);
 		}
 	}
 	function jumpForward(){
@@ -80,11 +80,11 @@
 	}
 	function mute() {
 		if(!player.muted){
-			player.muted() = true;
+			player.muted(true);
 			Mute.innerHTML = "Unmute";
 		}
 		else{
-			player.muted() = false;
+			player.muted(false);
 			Mute.innerHTML = "Mute";
 		}
 	}
